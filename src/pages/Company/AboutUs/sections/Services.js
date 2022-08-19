@@ -14,7 +14,7 @@ import bgWeb from "assets/images/web.jpg";
 import bgMobile from "assets/images/mobile.jpg";
 import bgAi from "assets/images/ai.jpg";
 import bgEnterprise from "assets/images/enterprise.jpg";
-import bgImage from "assets/images/examples/city.jpg";
+import bgImage from "assets/images/examples/bfg.jpg";
 
 function CardRotate() {
   return (
@@ -25,8 +25,8 @@ function CardRotate() {
       sx={{
         backgroundImage: ({ palette: { gradients }, functions: { linearGradient, rgba } }) =>
           `${linearGradient(
-            rgba(gradients.dark.main, 0.8),
-            rgba(gradients.dark.state, 0.8)
+            rgba(gradients.dark.main, 0.3),
+            rgba(gradients.dark.state, 0.3)
           )}, url(${bgImage})`,
       }}
     >

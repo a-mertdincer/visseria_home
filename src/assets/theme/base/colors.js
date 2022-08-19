@@ -96,6 +96,10 @@ export default {
     900: "#212529",
   },
 
+  header: {
+    main: "#495057"
+  },
+
   gradients: {
     primary: {
       main: "#EC407A",

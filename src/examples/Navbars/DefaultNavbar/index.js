@@ -300,10 +300,8 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
           }}
         >
           <MKBox borderRadius="lg">
-            <MKTypography variant="h1" color="white">
-              <Icon ref={setArrowRef} sx={{ mt: -3 }}>
-                arrow_drop_up
-              </Icon>
+            <MKTypography variant="h1" color="error">
+              <Icon ref={setArrowRef} sx={{ mt: -3 }} />
             </MKTypography>
             <MKBox shadow="lg" borderRadius="lg" p={2} mt={2}>
               {renderRoutes}
@@ -386,7 +384,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                         fontSize="small"
                         sx={{ fontWeight: "normal", verticalAlign: "middle", mr: -0.5 }}
                       >
-                        keyboard_arrow_right
+                        keyboard_arrow_down
                       </Icon>
                     )}
                   </MKTypography>

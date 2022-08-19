@@ -6,13 +6,14 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 // Material Kit 2 PRO React components
 import MKTypography from "components/MKTypography";
+import Logo from "assets/images/icon.jpg"
 
 const date = new Date().getFullYear();
 
 export default {
   brand: {
-    name: "Material Kit 2 PRO",
-    image: "asdd",
+    name: "VISSERIA",
+    image: Logo,
     route: "/",
   },
   socials: [
@@ -71,18 +72,7 @@ export default {
   ],
   copyright: (
     <MKTypography variant="button" fontWeight="regular">
-      All rights reserved. Copyright &copy; {date} Material Kit by{" "}
-      <MKTypography
-        component="a"
-        href="https://www.creative-tim.com"
-        target="_blank"
-        rel="noreferrer"
-        variant="button"
-        fontWeight="regular"
-      >
-        Creative Tim
-      </MKTypography>
-      .
+      All rights reserved. Copyright &copy; {date} Visseria.
     </MKTypography>
   ),
 };

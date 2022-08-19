@@ -37,30 +37,9 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Icon from "@mui/material/Icon";
 
 // Pages
-import AboutUs from "layouts/pages/company/about-us";
 
-const routes = [
-  {
-    name: "pages",
-    icon: <Icon>dashboard</Icon>,
-    columns: 1,
-    rowsPerColumn: 1,
-    collapse: [
-      {
-        name: "company",
-        collapse: [
-          {
-            name: "about us",
-            route: "/pages/company/about-us",
-            component: <AboutUs />,
-          },
-        ],
-      },
-    ],
-  },
-];
+const routes = [];
 
 export default routes;

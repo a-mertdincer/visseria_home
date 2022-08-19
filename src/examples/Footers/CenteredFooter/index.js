@@ -33,7 +33,6 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 function CenteredFooter({ company, links, socials, light }) {
-  const { href, name } = company;
 
   const year = new Date().getFullYear();
 
@@ -66,6 +65,12 @@ function CenteredFooter({ company, links, socials, light }) {
   return (
     <MKBox component="footer" py={6}>
       <Grid container justifyContent="center">
+      <Grid item xs={12} lg={8} sx={{ textAlign: "left" }}>
+          <MKTypography variant="body2" color={light ? "white" : "secondary"}>
+          Visseria Teknoloji Ltd. Şti. <br/>
+          Yıldırım Beyazıt Mah. Aşık Veysel Blv. E.Ü. Tgb İdare ve Kuluçka 5 No: 67 /4 İç Kapı No: 43 Melikgazi/Kayseri <br/> ‏
+          </MKTypography>
+        </Grid>
         <Grid item xs={10} lg={8}>
           <Stack
             direction="row"
@@ -84,18 +89,7 @@ function CenteredFooter({ company, links, socials, light }) {
         </Grid>
         <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
           <MKTypography variant="body2" color={light ? "white" : "secondary"}>
-            Copyright &copy; {year} Material by{" "}
-            <MKTypography
-              component={Link}
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-              variant="body2"
-              color={light ? "white" : "secondary"}
-            >
-              {name}
-            </MKTypography>
-            .
+            Copyright &copy; {year} Visseria. 
           </MKTypography>
         </Grid>
       </Grid>

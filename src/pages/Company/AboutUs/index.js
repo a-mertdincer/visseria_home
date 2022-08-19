@@ -18,18 +18,20 @@ import MKButton from "components/MKButton";
 
 // Material Kit 2 PRO React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import Footer from "examples/Footers/CenteredFooter";
+import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // About Us page sections
 import Services from "pages/Company/AboutUs/sections/Services";
-import Featuring from "pages/Company/AboutUs/sections/Featuring";
+import ContactUs from "pages/Company/AboutUs/sections/ContactUs";
+import Information from "pages/LandingPages/Coworking/sections/Information";
+import Testimonials from "pages/LandingPages/Coworking/sections/Testimonials";
 
 // Routes
 import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bulb.jpg";
+import bgImage from "assets/images/bground.jpg";
 
 function AboutUs() {
   const headerRef = useRef(null);
@@ -65,7 +67,7 @@ function AboutUs() {
   };
   return (
     <>
-      <DefaultNavbar routes={routes} transparent light />
+      <DefaultNavbar routes={routes} />
       <MKBox
         ref={headerRef}
         minHeight="75vh"
@@ -73,8 +75,8 @@ function AboutUs() {
         sx={{
           backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
             `${linearGradient(
-              rgba(gradients.dark.main, 0.6),
-              rgba(gradients.dark.state, 0.6)
+              rgba(gradients.info.main, 0.4),
+              rgba(gradients.info.state, 0.4)
             )}, url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -96,6 +98,7 @@ function AboutUs() {
             <MKTypography
               variant="h1"
               color="white"
+              fontSize="29px"
               sx={({ breakpoints, typography: { size } }) => ({
                 [breakpoints.down("md")]: {
                   fontSize: size["3xl"],
@@ -104,7 +107,7 @@ function AboutUs() {
             >
               Your technology partner for <span ref={typedJSRef} /> digital solutions.
             </MKTypography>
-            <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
+            <MKTypography variant="body1" color="white" opacity={0.9} mt={1} mb={5}>
               We consult, design and develop artificial intelligence-based software solutions using
               the latest technology trends.
             </MKTypography>
@@ -115,23 +118,6 @@ function AboutUs() {
             >
               about us
             </MKButton>
-            <MKTypography variant="h6" color="white" mt={8} mb={1}>
-              Find us on
-            </MKTypography>
-            <MKBox display="flex" justifyContent="center" alignItems="center">
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                <i className="fab fa-facebook" />
-              </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                <i className="fab fa-instagram" />
-              </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                <i className="fab fa-twitter" />
-              </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#">
-                <i className="fab fa-google-plus" />
-              </MKTypography>
-            </MKBox>
           </Grid>
         </Container>
       </MKBox>
@@ -145,12 +131,13 @@ function AboutUs() {
         }}
       >
         <div ref={ref}>
-          <Services />
+          <Information />
+          <Testimonials />
         </div>
-        <Featuring />
+        <ContactUs />
       </Card>
       <MKBox pt={6} px={1} mt={6}>
-        <Footer content={footerRoutes} />
+        <DefaultFooter content={footerRoutes} />
       </MKBox>
     </>
   );
